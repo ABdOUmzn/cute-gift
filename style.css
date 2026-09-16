@@ -1,0 +1,336 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #ffb6d5,
+        #ffcce2
+    );
+
+    color: #7a3152;
+
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+
+p {
+    font-size: 22px;
+}
+/* =========================
+   القطة 🎀
+========================= */
+
+.gift {
+    position: relative;
+}
+
+
+/* الرأس */
+
+.cat {
+    position: relative;
+
+    width: 260px;
+    height: 230px;
+
+    margin: 0 auto 25px;
+}
+
+
+/* الوجه */
+
+.face {
+    position: absolute;
+
+    width: 230px;
+    height: 190px;
+
+    background: #fffafa;
+
+    border: 4px solid #7a3152;
+
+    border-radius: 48% 48% 45% 45%;
+
+    left: 15px;
+    top: 35px;
+
+    box-shadow: 0 12px 30px rgba(180, 60, 120, 0.25);
+}
+
+
+/* الأذنين */
+
+.ear {
+    position: absolute;
+
+    width: 70px;
+    height: 75px;
+
+    background: #fffafa;
+
+    border: 4px solid #7a3152;
+
+    top: 5px;
+}
+
+.left-ear {
+    left: 10px;
+
+    transform: rotate(-35deg);
+
+    border-radius: 15px 50px 10px 40px;
+}
+
+.right-ear {
+    right: 10px;
+
+    transform: rotate(35deg);
+
+    border-radius: 50px 15px 40px 10px;
+}
+
+
+/* العيون */
+
+.eye {
+    position: absolute;
+
+    width: 14px;
+    height: 28px;
+
+    background: #333;
+
+    border-radius: 50%;
+    
+    top: 75px;
+}
+
+.left-eye {
+    left: 65px;
+}
+
+.right-eye {
+    right: 65px;
+}
+
+
+/* الأنف */
+
+.nose {
+    position: absolute;
+
+    width: 13px;
+    height: 10px;
+
+    background: #f4c542;
+
+    border-radius: 50%;
+
+    top: 110px;
+    left: 105px;
+}
+
+
+/* الشوارب */
+
+.whisker {
+    position: absolute;
+
+    width: 45px;
+    height: 3px;
+
+    background: #555;
+}
+
+.left-whisker-1 {
+    left: 15px;
+    top: 105px;
+    transform: rotate(10deg);
+}
+
+.left-whisker-2 {
+    left: 15px;
+    top: 125px;
+    transform: rotate(-10deg);
+}
+
+.right-whisker-1 {
+    right: 15px;
+    top: 105px;
+    transform: rotate(-10deg);
+}
+
+.right-whisker-2 {
+    right: 15px;
+    top: 125px;
+    transform: rotate(10deg);
+}
+
+
+/* 🎀 الفيونكة */
+
+.bow {
+    position: absolute;
+
+    top: 15px;
+    right: 0px;
+
+    width: 70px;
+    height: 55px;
+}
+
+.bow-left,
+.bow-right {
+    position: absolute;
+
+    width: 38px;
+    height: 35px;
+
+    background: #ff5fa2;
+
+    border: 3px solid #7a3152;
+
+    top: 10px;
+}
+
+.bow-left {
+    left: 0;
+
+    border-radius: 50% 20% 50% 20%;
+
+    transform: rotate(-15deg);
+}
+
+.bow-right {
+    right: 0;
+
+    border-radius: 20% 50% 20% 50%;
+
+    transform: rotate(15deg);
+}
+
+.bow-center {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    background: #ff8abb;
+
+    border: 3px solid #7a3152;
+
+    border-radius: 50%;
+
+    left: 26px;
+    top: 18px;
+
+    z-index: 2;
+}
+/* =========================
+   حركة القطة 🎀
+========================= */
+
+.cat {
+    animation: floating 2.5s ease-in-out infinite;
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+/* =========================
+   زر الهدية 💗
+========================= */
+
+#giftButton {
+    border: none;
+
+    background: #ff5fa2;
+
+    color: white;
+
+    font-size: 18px;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(180, 60, 120, 0.25);
+
+    transition: 0.3s;
+}
+
+#giftButton:hover {
+    transform: scale(1.08);
+
+    background: #ff408c;
+}
+/* 💌 الرسالة */
+
+.message {
+    display: none;
+
+    margin: 25px auto 0;
+
+    padding: 20px 30px;
+
+    max-width: 400px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border: 3px solid #ff5fa2;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(180, 60, 120, 0.2);
+
+    animation: messageAppear 0.8s ease;
+}
+
+.message h2 {
+    color: #ff4f9a;
+
+    margin-top: 0;
+}
+
+.message p {
+    font-size: 18px;
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
